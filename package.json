@@ -1,0 +1,55 @@
+{
+  "name": "ReactNativeAIWTemplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build:web": "cd web && webpack",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "cd web && webpack serve",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "^17.0.1",
+    "react-native": "0.63.4",
+    "react-native-web": "^0.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "@types/jest": "^25.2.3",
+    "@types/react-native": "^0.63.2",
+    "@types/react-test-renderer": "^16.9.2",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "html-webpack-plugin": "^5.2.0",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "prettier": "^2.2.1",
+    "react-native-typescript-transformer": "^1.2.13",
+    "react-test-renderer": "16.13.1",
+    "ts-loader": "^8.0.17",
+    "typescript": "^3.9.9",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "resolutions": {
+    "@types/react": "^16"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
