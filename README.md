@@ -1,0 +1,1 @@
+# react-native-android-ios-web-typescript-template
