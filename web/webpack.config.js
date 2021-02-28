@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(rootDir, 'dist'),
-    filename: 'app.bundle.js',
+    filename: 'app-[hash].bundle.js',
   },
   devtool: 'source-map',
   module: {
