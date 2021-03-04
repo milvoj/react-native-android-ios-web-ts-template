@@ -2,24 +2,18 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {Button} from 'react-native-paper';
 
-interface Props {
-  navigation: any;
-}
-
-const HomePage: React.FC<Props> = ({navigation}) => {
-  console.log(navigation);
+const LoginPage: React.FC = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{color: '#000000'}}>HomePage</Text>
+      <Text style={{color: '#000000'}}>LoginPage</Text>
       <Button
-        icon="help-circle-outline"
         mode="contained"
-        onPress={() => navigation.navigate('Help')}
+        onPress={() => console.log('login')}
         style={{width: 300, marginTop: 100}}>
-        Help
+        Login
       </Button>
     </View>
   );
 };
 
-export default HomePage;
+export default LoginPage;

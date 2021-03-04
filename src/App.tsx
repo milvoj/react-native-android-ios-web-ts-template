@@ -10,35 +10,38 @@ import {Dimensions, Platform, SafeAreaView} from 'react-native';
 import {Provider as PaperProvider} from 'react-native-paper';
 import {NavigationContainer} from '@react-navigation/native';
 import 'react-native-gesture-handler';
-import AppNavigator from './navigation/AppNavigator';
+import StoreProvider from './store/StoreProvider';
+import AppContainer from "./AppContainer";
 
 const {height} = Dimensions.get('window');
 
 const App = () => {
   return (
-    <PaperProvider>
-      <React.Fragment>
-        {Platform.OS === 'web' ? (
-          <style type="text/css">
-            {`@font-face {
+    <StoreProvider>
+      <PaperProvider>
+        <React.Fragment>
+          {Platform.OS === 'web' ? (
+            <style type="text/css">
+              {`@font-face {
                 font-family: 'MaterialCommunityIcons';
                 src: url(${
                   require('react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf')
                     .default
                 }) format('truetype');
               }`}
-          </style>
-        ) : null}
-        <SafeAreaView
-          style={{
-            height: height,
-          }}>
-          <NavigationContainer linking={{enabled: false, prefixes: []}}>
-            <AppNavigator />
-          </NavigationContainer>
-        </SafeAreaView>
-      </React.Fragment>
-    </PaperProvider>
+            </style>
+          ) : null}
+          <SafeAreaView
+            style={{
+              height: height,
+            }}>
+            <NavigationContainer linking={{enabled: false, prefixes: []}}>
+              <AppContainer />
+            </NavigationContainer>
+          </SafeAreaView>
+        </React.Fragment>
+      </PaperProvider>
+    </StoreProvider>
   );
 };
 

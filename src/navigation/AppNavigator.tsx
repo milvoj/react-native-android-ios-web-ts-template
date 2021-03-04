@@ -15,7 +15,7 @@ const AppNavigator = () => {
       />
       <AppStack.Screen
         options={{headerShown: true}}
-        name={'HelpPage'}
+        name={'Help'}
         component={HelpPage}
       />
     </AppStack.Navigator>
