@@ -12,6 +12,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import 'react-native-gesture-handler';
 import StoreProvider from './store/StoreProvider';
 import AppContainer from "./AppContainer";
+import 'setimmediate'
+import TabNavigator from "./navigation/TabNavigator";
+import DrawerNavigator from "./navigation/DrawerNavigator";
 
 const {height} = Dimensions.get('window');
 
@@ -36,7 +39,7 @@ const App = () => {
               height: height,
             }}>
             <NavigationContainer linking={{enabled: false, prefixes: []}}>
-              <AppContainer />
+              <DrawerNavigator />
             </NavigationContainer>
           </SafeAreaView>
         </React.Fragment>
